@@ -22,4 +22,5 @@ class Pet(models.Model):
     sexo = models.CharField(max_length=1,choices=sexo_choice,null=True)
     user = models.ForeignKey(get_user_model(),on_delete=models.CASCADE)
 
-
+    def __str__(self):
+        return self.nome
